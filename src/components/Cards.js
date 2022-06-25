@@ -2,12 +2,16 @@ import { useEffect, useState } from "react";
 import { createSearchJikanURL } from "./Jikan";
 
 import "./Cards.css";
-
-const handleCardClick = (event) => {
-  console.log("Card Clicked: ", event.currentTarget);
-};
+import { useNavigate } from "react-router-dom";
 
 function Cards(props) {
+  const navigate = useNavigate();
+
+  const handleCardClick = (selected_id) => {
+    console.log("Card Clicked: ", selected_id);
+    navigate("/info", { state: { mal_id: selected_id } });
+  };
+
   const [showResults, setShowImage] = useState(null);
 
   const query = "Naruto";
@@ -36,7 +40,10 @@ function Cards(props) {
         showResults.length &&
         showResults.map((result) => (
           <li key={result.mal_id}>
-            <div onClick={handleCardClick} className="card">
+            <div
+              onClick={() => handleCardClick(result.mal_id)}
+              className="card"
+            >
               <div className="card__body">
                 {
                   <>
