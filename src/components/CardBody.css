@@ -1,0 +1,32 @@
+:root {
+  --radius: 0.2rem;
+  --card-width: 15rem;
+  --card-height: 21rem;
+}
+
+.card__body {
+  overflow: hidden;
+  border-radius: var(--radius);
+  width: var(--card-width);
+  height: var(--card-height) + 1rem;
+  background-color: transparent;
+}
+
+.card__image {
+  object-fit: fill;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding-bottom: 0rem;
+  vertical-align: top;
+}
+
+.card__title {
+  color: white;
+  margin: 0;
+  height: 3rem;
+  text-align: center;
+  /* border-left: 0.01rem solid white;
+  border-bottom: 0.01rem solid white;
+  border-right: 0.01rem solid white;
+  border-radius: var(--radius); */
+}

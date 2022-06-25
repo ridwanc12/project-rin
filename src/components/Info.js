@@ -1,18 +1,20 @@
 import { useLocation } from "react-router-dom";
+
 import "./Info.css";
+import CardBody from "./CardBody";
 
 function Info() {
   const { state } = useLocation();
-  let mal_id = state.mal_id;
+  let cardInfo = state.cardInfo;
 
-  // Default value if mal_id undefined
-  if (mal_id === undefined) {
-    mal_id = 20;
-  }
+  console.log(cardInfo);
 
   return (
     <div className="info">
-      <h1>{mal_id}</h1>
+      <CardBody
+        image={cardInfo.images.jpg.large_image_url}
+        title={cardInfo.title}
+      />
     </div>
   );
 }
