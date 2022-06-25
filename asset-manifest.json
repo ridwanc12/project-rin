@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/project-rin/static/css/main.0917b8bd.css",
-    "main.js": "/project-rin/static/js/main.123e8373.js",
+    "main.css": "/project-rin/static/css/main.357ff27b.css",
+    "main.js": "/project-rin/static/js/main.53f7e4c0.js",
     "index.html": "/project-rin/index.html",
-    "main.0917b8bd.css.map": "/project-rin/static/css/main.0917b8bd.css.map",
-    "main.123e8373.js.map": "/project-rin/static/js/main.123e8373.js.map"
+    "main.357ff27b.css.map": "/project-rin/static/css/main.357ff27b.css.map",
+    "main.53f7e4c0.js.map": "/project-rin/static/js/main.53f7e4c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.0917b8bd.css",
-    "static/js/main.123e8373.js"
+    "static/css/main.357ff27b.css",
+    "static/js/main.53f7e4c0.js"
   ]
 }
