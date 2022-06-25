@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { createSearchJikanURL } from "./Jikan";
-
-import "./Cards.css";
 import { useNavigate } from "react-router-dom";
 
-function Cards(props) {
+import "./Grid.css";
+import { createSearchJikanURL } from "./Jikan";
+import Card from "./Card";
+
+function Grid(props) {
   const navigate = useNavigate();
 
   const handleCardClick = (selected_id) => {
@@ -35,32 +36,16 @@ function Cards(props) {
   }, []);
 
   return (
-    <ul className="cards">
+    <ul className="grid">
       {Array.isArray(showResults) &&
         showResults.length &&
         showResults.map((result) => (
           <li key={result.mal_id}>
-            <div
-              onClick={() => handleCardClick(result.mal_id)}
-              className="card"
-            >
-              <div className="card__body">
-                {
-                  <>
-                    <img
-                      src={result.images.jpg.large_image_url}
-                      alt="Show cover art"
-                      className="card__image"
-                    />
-                    <h3 className="card__title">{result.title}</h3>
-                  </>
-                }
-              </div>
-            </div>
+            <Card handleCardClick={handleCardClick} result={result} />
           </li>
         ))}
     </ul>
   );
 }
 
-export default Cards;
+export default Grid;

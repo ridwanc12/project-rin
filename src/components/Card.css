@@ -4,16 +4,6 @@
   --card-height: 21rem;
 }
 
-.cards {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
-  row-gap: 2rem;
-  column-gap: 0.5rem;
-  justify-content: center;
-  /* justify-items: center; */
-}
-
 .card {
   overflow: hidden;
   border-radius: var(--radius);
