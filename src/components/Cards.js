@@ -3,6 +3,10 @@ import { createSearchJikanURL } from "./Jikan";
 
 import "./Cards.css";
 
+const handleCardClick = (event) => {
+  console.log("Card Clicked: ", event.currentTarget);
+};
+
 function Cards(props) {
   const [showResults, setShowImage] = useState(null);
 
@@ -32,15 +36,18 @@ function Cards(props) {
         showResults.length &&
         showResults.map((result) => (
           <li key={result.mal_id}>
-            <div className="card">
+            <div onClick={handleCardClick} className="card">
               <div className="card__body">
-                {Array.isArray(showResults) && showResults.length && (
-                  <img
-                    src={result.images.jpg.large_image_url}
-                    alt="Show cover art"
-                    className="card__image"
-                  />
-                )}
+                {
+                  <>
+                    <img
+                      src={result.images.jpg.large_image_url}
+                      alt="Show cover art"
+                      className="card__image"
+                    />
+                    <h3 className="card__title">{result.title}</h3>
+                  </>
+                }
               </div>
             </div>
           </li>
