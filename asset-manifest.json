@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/project-rin/static/css/main.0917b8bd.css",
+    "main.js": "/project-rin/static/js/main.123e8373.js",
+    "index.html": "/project-rin/index.html",
+    "main.0917b8bd.css.map": "/project-rin/static/css/main.0917b8bd.css.map",
+    "main.123e8373.js.map": "/project-rin/static/js/main.123e8373.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0917b8bd.css",
+    "static/js/main.123e8373.js"
+  ]
+}
