@@ -7,7 +7,6 @@ function Card(props) {
   const navigate = useNavigate();
 
   const handleCardClick = (cardInfo) => {
-    console.log("Card clicked: ", cardInfo.mal_id);
     navigate("/info", { state: { cardInfo: cardInfo } });
   };
 

@@ -7,8 +7,6 @@ function Info() {
   const { state } = useLocation();
   let cardInfo = state.cardInfo;
 
-  console.log(cardInfo);
-
   return (
     <div className="info">
       <CardBody

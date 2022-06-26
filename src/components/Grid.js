@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 import "./Grid.css";
-import { createSearchJikanURL } from "./Jikan";
 import Card from "./Card";
+import { createSearchJikanURL } from "./Jikan";
 
 function Grid() {
   const [showResults, setShowImage] = useState(null);
 
   const query = "Naruto";
-  const numResults = 10;
+  const numResults = 15;
 
   useEffect(() => {
     fetch(createSearchJikanURL(query, numResults))
