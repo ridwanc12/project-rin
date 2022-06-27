@@ -1,9 +1,35 @@
+import { useRef } from "react";
+
 import "./SearchBar.css";
 
-function SearchBar() {
+function SearchBar({ setSearchText }) {
+  const inputRef = useRef(null);
+
+  function handleSearchButtonClick() {
+    setSearchText(inputRef.current.value);
+    inputRef.current.value = "";
+  }
+
+  function handleSearchBoxKeyPress(e) {
+    if (e.key === "Enter") {
+      setSearchText(inputRef.current.value);
+      inputRef.current.value = "";
+    }
+  }
+
   return (
     <div className="searchBar">
-      <h1>SearchBar</h1>
+      <input
+        type="text"
+        className="searchBox"
+        ref={inputRef}
+        onKeyDown={(e) => {
+          handleSearchBoxKeyPress(e);
+        }}
+      />
+      <button onClick={handleSearchButtonClick} className="searchButton">
+        Search
+      </button>
     </div>
   );
 }

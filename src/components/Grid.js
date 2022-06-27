@@ -2,8 +2,9 @@ import "./Grid.css";
 import Card from "./Card";
 import SearchResults from "./SearchResults";
 
-function Grid(props) {
-  const showResults = SearchResults(props.query, props.numResults);
+// NOTE: This is deconstruction of the 'props' variable into query and numResults
+function Grid({ query, numResults }) {
+  const showResults = SearchResults(query, numResults);
 
   if (!Array.isArray(showResults) || !showResults.length) {
     return (

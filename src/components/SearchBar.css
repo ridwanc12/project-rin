@@ -1,4 +1,11 @@
 .searchBar {
-  color: white;
   text-align: center;
+}
+
+.searchBox {
+  background-color: white;
+}
+
+.searchButton {
+  width: auto;
 }

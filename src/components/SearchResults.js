@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { createSearchJikanURL } from "./Jikan";
 
 function SearchResults(query, numResults) {
-  const [showResults, setShowImage] = useState([]);
+  const [showResults, setShowImage] = useState(null);
 
   useEffect(() => {
     fetch(createSearchJikanURL(query, numResults))
